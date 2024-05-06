@@ -268,7 +268,7 @@
         }
     }
 ]
-table1.setAttribute("style","border:1px solid black;border-collapse:none")
+table1.setAttribute("style","border:1px solid black;border-collapse:collapse")
 for(i=0;i<obj.length;i++){
     let tr=document.createElement("tr");
     let td1=document.createElement("td");
@@ -276,15 +276,16 @@ for(i=0;i<obj.length;i++){
     let td3=document.createElement("td");
     let td4=document.createElement("td");
     let td5=document.createElement("td");
-    let td6=document.createElement("td");
+    let td6=document.createElement("img");
     let td7=document.createElement("td");
     let td8=document.createElement("td");
+    td6.setAttribute("style","width:100%;height:100%;align-items:center")
     td1.innerHTML=obj[i].id
     td2.innerHTML=obj[i].title
     td3.innerHTML=obj[i].price
     td4.innerHTML=obj[i].description
     td5.innerHTML=obj[i].category
-    td6.innerHTML=obj[i].image
+    td6.src=obj[i].image
     td7.innerHTML=obj[i].rating.rate
     td8.innerHTML=obj[i].rating.count
     tr.appendChild(td1)
